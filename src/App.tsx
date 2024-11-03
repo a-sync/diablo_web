@@ -486,6 +486,7 @@ const App: React.FC = () => {
 
 		//const isRetail = !!(file && !/^spawn\.mpq$/i.test(file.name));
 		const isRetail = true;
+
 		setLoading(true);
 		setRetail(isRetail);
 

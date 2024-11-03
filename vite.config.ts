@@ -5,12 +5,12 @@ import { VitePWA } from "vite-plugin-pwa";
 import packageJson from "./package.json";
 
 export default defineConfig({
-	base: "/",
+	base: "./",
 	plugins: [
 		react(),
 		wasm(),
 		VitePWA({
-			base: "/",
+			base: "./",
 			registerType: "autoUpdate",
 			workbox: {
 				runtimeCaching: [
@@ -26,7 +26,7 @@ export default defineConfig({
 						},
 					},
 				],
-				navigateFallback: "/index.html",
+				navigateFallback: "./index.html",
 				navigateFallbackAllowlist: [/^(?!\/__).*/],
 				maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
 			},

@@ -14,7 +14,7 @@ export default async function load_diabdat(api: IApi, fs: IFileSystem) {
 	}
 	if (!file) {
 		const diabdat = await axios.request({
-			url: import.meta.env.BASE_URL === '/' ? '/diabdat.mpq' : import.meta.env.BASE_URL + "/diabdat.mpq",
+			url: import.meta.env.BASE_URL === '/' ? 'diabdat.mpq' : import.meta.env.BASE_URL + "/diabdat.mpq",
 			responseType: "arraybuffer",
 			onDownloadProgress: (e) => {
 				if (api.onProgress) {
