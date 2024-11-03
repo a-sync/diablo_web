@@ -11,6 +11,12 @@ body,
 
 .app {
 	background-color: #000;
+	background-image: url(./icons/bg.jpg);
+  	background-position: center center;
+}
+
+.app--started {
+	background-image: none;
 }
 
 .app--dropping {

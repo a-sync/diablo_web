@@ -484,7 +484,8 @@ const App: React.FC = () => {
 
 		setDropping(0);
 
-		const isRetail = !!(file && !/^spawn\.mpq$/i.test(file.name));
+		//const isRetail = !!(file && !/^spawn\.mpq$/i.test(file.name));
+		const isRetail = true;
 		setLoading(true);
 		setRetail(isRetail);
 
