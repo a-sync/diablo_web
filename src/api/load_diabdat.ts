@@ -1,7 +1,7 @@
 import axios from "axios";
 import { IApi, IFileSystem } from "../types";
 
-const DiabdatSizes = [517501282, 263402726];
+const DiabdatSizes = [517501282, 263402726, 263383766];
 
 export { DiabdatSizes };
 
