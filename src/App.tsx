@@ -735,7 +735,7 @@ const App: React.FC = () => {
 						saveName={saveNameRef.current}
 					/>
 				)}
-				{loading && !started && <LoadingComponent title="Loading..." progress={progress} />}
+				{loading && !started && !error && <LoadingComponent title="Loading..." progress={progress} />}
 				{!started && !compress && !loading && !error && !showSaves && (
 					<StartScreen
 						hasSpawn={hasSpawn}

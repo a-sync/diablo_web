@@ -425,7 +425,10 @@ async function init_game(mpq: File | null, spawn: boolean, offscreen: boolean) {
 		const name = spawn ? "spawn.mpq" : "diabdat.mpq";
 		if (!files!.has(name)) {
 			// This should never happen, but we do support remote loading
-			files!.set(name, new RemoteFile(import.meta.env.BASE_URL==='/'?`/${name}`:`${import.meta.env.BASE_URL}/${name}`));
+			files!.set(
+				name,
+				new RemoteFile(import.meta.env.BASE_URL === "/" ? `/${name}` : `${import.meta.env.BASE_URL}/${name}`)
+			);
 		}
 	}
 
@@ -463,6 +466,7 @@ async function init_game(mpq: File | null, spawn: boolean, offscreen: boolean) {
 
 	const vers = import.meta.env.VERSION.match(/(\d+)\.(\d+)\.(\d+)/);
 
+	wasm._SNet_InitWebsocket();
 	wasm._DApi_Init(
 		Math.floor(performance.now()),
 		offscreen ? 1 : 0,
